@@ -4,7 +4,8 @@ Allows you to track tasks and set reminders.
 
 ## Usage
 
-```npm start
+```bash
+npm start
 ```
 
 ## Notes
