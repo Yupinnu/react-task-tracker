@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "text": "Meeting at School",
+      "day": "May 15th at 1:30pm",
+      "reminder": true,
+      "id": 1
+    },
+    {
+      "text": "6.6 Shopping",
+      "day": "June 6th all-day",
+      "reminder": false,
+      "id": 2
+    }
+  ]
+}
