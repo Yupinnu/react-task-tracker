@@ -19,21 +19,21 @@ const App = () => {
   }, [])
 
   const fetchTasks = async () => {
-    const res = await fetch("http://localhost:5000/tasks") 
+    const res = await fetch("https://strapi-t1.herokuapp.com/tasks") 
     const data = await res.json()
 
     return(data)
    }
 
   const fetchTask = async (id) => {
-   const res = await fetch(`http://localhost:5000/tasks/${id}`) 
+   const res = await fetch(`https://strapi-t1.herokuapp.com/tasks/${id}`) 
    const data = await res.json()
 
     return data
    }
 
   const addTask = async (task) => {
-    const res = await fetch("http://localhost:5000/tasks", {
+    const res = await fetch("https://strapi-t1.herokuapp.com/tasks", {
       method: "POST",
       headers: {
         "content-type" : "application/json"
@@ -51,7 +51,7 @@ const App = () => {
   }
 
   const deleteTask = async (id) => {
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    await fetch(`https://strapi-t1.herokuapp.com/tasks/${id}`, {
       method: "DELETE"
     })
     setTasks(tasks.filter((task) => task.id !== id))
@@ -61,7 +61,7 @@ const App = () => {
     const taskToToggle = await fetchTask(id) 
     const updTask = {...taskToToggle, reminder: !taskToToggle.reminder}
 
-    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+    const res = await fetch(`https://strapi-t1.herokuapp.com/tasks/${id}`, {
       method: "PUT",
       headers: {
         "content-type" : "application/json"
